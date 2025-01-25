@@ -6,4 +6,10 @@ gpa <- as.data.frame(gpa)
 # View Data
 head(gpa)
 
+# Summarize Data
+model <- lm(formula = Y ~ X, data = gpa)
+summary(model)
 
+# Scatter plot with regression line
+plot(gpa$X,gpa$Y, xlab="X",ylab="Y")
+abline(lm(formula = Y ~ X, data = gpa), col = "blue")
