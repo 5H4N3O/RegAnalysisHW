@@ -14,5 +14,5 @@ summary(model)
 plot(gpa$X,gpa$Y, xlab="X",ylab="Y")
 abline(lm(formula = Y ~ X, data = gpa), col = "blue")
 
-model$residuals #list all residuals
-sum(model$residuals) #Sum of all residuals
+# Sum of all residuals
+sum(model$residuals) 
