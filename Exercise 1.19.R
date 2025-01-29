@@ -16,3 +16,6 @@ abline(lm(formula = Y ~ X, data = gpa), col = "blue")
 
 # Sum of all residuals
 sum(model$residuals) 
+
+#MSE
+sum(model$residuals^2)/(nrow(gpa)-2)	
