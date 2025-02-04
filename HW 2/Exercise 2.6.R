@@ -44,3 +44,10 @@ print(confintb0)
 # Verify 95% Confidence Interval for β0 with R function
 ci_b0 <- confint(model, level = 0.95)
 print(ci_b0)
+
+# Hypothesis test for β0 < 9
+tstat <- (b0-9)/Sb0
+tstat
+tval
+p_value_one_tailed <- 1 - pt(tstat, n-2)
+p_value_one_tailed
