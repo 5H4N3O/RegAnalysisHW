@@ -27,3 +27,8 @@ print(confint)
 # Get 99% Confidence Interval for β1 with R function
 ci_b1 <- confint(model, level = 0.99)
 print(ci_b1)
+
+# Hypothesis test for β1 = 0
+tstat <- b1/Sb1
+tstat
+tval
