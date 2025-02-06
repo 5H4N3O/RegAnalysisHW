@@ -49,5 +49,7 @@ print(ci_b0)
 tstat <- (b0-9)/Sb0
 tstat
 tval
+
+# To get one tailed p value
 p_value_one_tailed <- 1 - pt(tstat, n-2)
 p_value_one_tailed

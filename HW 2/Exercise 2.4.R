@@ -19,6 +19,7 @@ Sb1 <- summary$coefficients[2, 2]
 n<-nrow(gpa)
 alpha <- 0.01
 tval <- qt(1-alpha/2, n-2)
+
 lowerb <- (b1-tval*Sb1)
 upperb <- (b1+tval*Sb1) 
 confint <- paste0("[", lowerb, ", ", upperb, "]")
