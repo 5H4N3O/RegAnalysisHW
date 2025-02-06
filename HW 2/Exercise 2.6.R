@@ -53,3 +53,7 @@ tval
 # To get one tailed p value
 p_value_one_tailed <- 1 - pt(tstat, n-2)
 p_value_one_tailed
+
+# Scatter plot with regression line
+plot(airfreight$X,airfreight$Y, xlab="X",ylab="Y")
+abline(lm(formula = Y ~ X, data = airfreight), col = "blue")

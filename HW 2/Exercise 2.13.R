@@ -18,7 +18,7 @@ alpha <- 0.05
 tval <- qt(1-alpha/2, n-2)
 tval
 
-# Get S(predmean) practice
+# Get Spred
 m <- sum(gpa$X == 28) # Count how many entries with X=28
 xbar <- mean(gpa$X) # Mean of X
 xbar
@@ -27,8 +27,8 @@ mse
 numerator <- ((28-xbar)^2)
 denominator <- sum((gpa$X-xbar)^2) #summation(Xi-xbar)^2
 denominator
-Spredmean <- sqrt(mse)*sqrt(((1/n) + (numerator/denominator)))
-Spredmean
+Spred <- sqrt(mse)*sqrt(((1/n) + (numerator/denominator)))
+Spred
 
 # Part a
 newX <- data.frame(X=28) #Needs to be column name
@@ -46,8 +46,8 @@ yh <- (b0 + b1*28)
 yh
 
 # Boundary values for confidence band
-lowerb <- (yh-w*Spredmean)
-upperb <- (yh+w*Spredmean) 
+lowerb <- (yh-w*Spred)
+upperb <- (yh+w*Spred) 
 confband <- paste0("[", lowerb, ", ", upperb, "]")
 print(confband)
 
