@@ -16,3 +16,6 @@ Sb1 <- summary$coefficients[2, 2]
 
 # Set up ANOVA table
 anova(model)
+
+# F(1-alpha,1,n-2) value for F test
+qf(1-.01,1,nrow(hardness)-2)
